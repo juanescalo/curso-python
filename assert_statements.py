@@ -1,13 +1,12 @@
 def divisors(num):
-        assert num.isnumeric(), "Debes ingresar un número"
         divisors = [i for i in range(1, num + 1) if num % i == 0]
         return divisors
 
 
 def run():
-        num = int(input("Ingresa un número: "))
-        assert num > 0, "Debes ingresar un número positivo"
-        print(divisors(num))
+        num = input("Ingresa un número: ")
+        assert num.isnumeric() and int(num) > 0, "Ingresa solo números positivos"
+        print(divisors(int(num)))
         print("Terminó mi programa")
 
 
